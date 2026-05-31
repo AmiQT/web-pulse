@@ -1,17 +1,17 @@
-# 🛰️ Global Service Sentinel
+# Global Service Sentinel
 
 A high-performance, real-time remote service monitoring and alerting tool. Built with modern SRE (Site Reliability Engineering) principles to track the availability of mission-critical assets.
 
 ![Dashboard Preview](https://img.shields.io/badge/UI-Glassmorphism-66fcf1) ![Python](https://img.shields.io/badge/Python-3.12%2B-blue) ![FastAPI](https://img.shields.io/badge/FastAPI-Modern-009688)
 
-## ✨ Key Features
+## Key Features
 
 - **Blazing Fast Concurrency**: Utilizes `asyncio` and FastAPI to ping multiple targets concurrently without blocking the main event loop.
 - **Advanced WAF Bypass**: Uses `curl_cffi` to perfectly impersonate Google Chrome's TLS/SSL Fingerprint (JA3), allowing the Sentinel to monitor targets protected by strict Web Application Firewalls (e.g., Cloudflare, Imperva, F5) that block generic HTTP clients.
 - **Smart Alerting System**: Integrates seamlessly with Telegram bots. Implements a "3-strike" failure logic to prevent alert fatigue and spam before dispatching an emergency notification.
 - **Real-Time Telemetry Dashboard**: A beautifully designed, zero-dependency, glassmorphism frontend that polls background metrics dynamically every 3 seconds.
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 web-pulse/
@@ -27,14 +27,14 @@ web-pulse/
 └── targets.json          # Configuration file containing URLs to monitor
 ```
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Backend**: Python 3.12+, FastAPI, Uvicorn
 - **Networking**: `curl_cffi` (for advanced TLS impersonation)
 - **Logging**: `loguru` (for clean, structured server logs)
 - **Frontend**: Vanilla HTML5, CSS3 (No build step required)
 
-## 🚀 Quick Start (Local Setup)
+## Quick Start (Local Setup)
 
 1. **Clone the repository:**
    ```bash
@@ -69,7 +69,7 @@ web-pulse/
    ```
    *The real-time dashboard will now be accessible at `http://localhost:8000/`*
 
-## ☁️ Cloud Deployment (Render)
+## Cloud Deployment (Render)
 
 This project is configured for one-click deployment via **Render**.
 1. Push your code to GitHub.
@@ -79,4 +79,4 @@ This project is configured for one-click deployment via **Render**.
 5. **Keep-Alive Note**: Render Free Tier sleeps after 15 minutes of inactivity. Use an external ping service like [UptimeRobot](https://uptimerobot.com/) to ping your deployed URL every 5 minutes to prevent cold starts.
 
 ---
-*Built with ❤️ for High Availability and Peace of Mind.*
+*Built for High Availability and Peace of Mind.*
